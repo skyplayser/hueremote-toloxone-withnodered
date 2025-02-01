@@ -23,7 +23,7 @@
         ],
         "x": 74,
         "y": 579,
-        "w": 1082,
+        "w": 1092,
         "h": 262
     },
     {
@@ -306,7 +306,7 @@
         "type": "http request",
         "z": "7d09e02b.55be3",
         "g": "af4d52c60e3fa0f2",
-        "name": "HTTP GET",
+        "name": "MINISERVER LOGIN",
         "method": "GET",
         "ret": "txt",
         "paytoqs": "ignore",
@@ -318,7 +318,7 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 1010,
+        "x": 1040,
         "y": 720,
         "wires": [
             []
