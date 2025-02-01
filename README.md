@@ -59,3 +59,12 @@ Loxone benötigt zur Verarbeitung der Schalterzustände einen Binär-Decodierer:
 
 ## 6. Fazit
 Mit diesem Node-RED-Flow kann ein Zigbee-Schalter einfach in ein Loxone Smart Home integriert werden. Durch die flexible Anpassung lassen sich auch weitere Schalter oder Funktionen hinzufügen.
+
+## 7. Sicherheitsbelehrung
+Die Kommunikation zwischen Node-RED und dem Loxone Miniserver erfolgt über **Basic-Authentifizierung**, die **nicht verschlüsselt** ist. 
+
+### Sicherheitsmaßnahmen:
+- Es wird dringend empfohlen, einen separaten **Loxone-Benutzer namens "API"** anzulegen.
+- Dieser Benutzer sollte **nur die unbedingt notwendigen Rechte** erhalten, um die virtuellen Eingänge zu steuern.
+- Falls möglich, sollte der Zugriff auf den Miniserver über eine **VPN-Verbindung** oder ein internes Netzwerk eingeschränkt werden.
+
