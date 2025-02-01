@@ -1,5 +1,5 @@
 Verwendete Palette: 
-node-red-contrib-zigbee2mqtt 2.7.4
+
 
 # Anleitung: Zigbee-Schalter mit Loxone verbinden
 
@@ -8,7 +8,9 @@ node-red-contrib-zigbee2mqtt 2.7.4
 - Ein **Zigbee-Schalter**, der von Zigbee2MQTT unterstützt wird
 - Ein laufender **Loxone Miniserver**
 - **Node-RED** installiert und eingerichtet
+- **Zigbee2MQTT** installiert und eingerichtet
 - Zugriff auf das Node-RED-Interface
+- node-red-contrib-zigbee2mqtt 2.7.4 intsalliert
 
 ## 2. Funktionsweise des Node-RED-Flows
 Der bereitgestellte Flow erlaubt die Integration eines Zigbee-Schalters mit einem virtuellen Eingang in Loxone. 
