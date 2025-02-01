@@ -1,0 +1,379 @@
+[
+    {
+        "id": "af4d52c60e3fa0f2",
+        "type": "group",
+        "z": "7d09e02b.55be3",
+        "name": "Zigbee-Schalter zu Loxone",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "0118dc3fe4090845",
+            "a14092d776c6f31d",
+            "18e7f0e0ac7e35b0",
+            "1c358fa649291db9",
+            "2f567e2ce3cf61a7",
+            "bc48ca76163adfaa",
+            "428ee8ab33e7e2ec",
+            "4040e280a568d4fb",
+            "1b83461c8ae75d2f",
+            "eeb5588d38005907"
+        ],
+        "x": 74,
+        "y": 579,
+        "w": 1082,
+        "h": 262
+    },
+    {
+        "id": "0118dc3fe4090845",
+        "type": "zigbee2mqtt-in",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "TestSchalter",
+        "server": "07deedef341ba2a2",
+        "friendly_name": "TestSchalter (929002398602)",
+        "device_id": "0x001788010927ecb2",
+        "state": "action",
+        "outputAtStartup": true,
+        "filterChanges": false,
+        "enableMultiple": false,
+        "x": 170,
+        "y": 720,
+        "wires": [
+            [
+                "a14092d776c6f31d"
+            ]
+        ]
+    },
+    {
+        "id": "a14092d776c6f31d",
+        "type": "switch",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on_press",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "up_press",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "down_press",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off_press",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off_press_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "down_press_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "up_press_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on_press_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on_hold_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on_up_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on_down_release",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "on_off_release",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 12,
+        "x": 410,
+        "y": 720,
+        "wires": [
+            [
+                "18e7f0e0ac7e35b0"
+            ],
+            [
+                "1c358fa649291db9"
+            ],
+            [
+                "2f567e2ce3cf61a7"
+            ],
+            [
+                "bc48ca76163adfaa"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ],
+            [
+                "428ee8ab33e7e2ec"
+            ]
+        ]
+    },
+    {
+        "id": "18e7f0e0ac7e35b0",
+        "type": "change",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "ON OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 620,
+        "wires": [
+            [
+                "1b83461c8ae75d2f"
+            ]
+        ]
+    },
+    {
+        "id": "1c358fa649291db9",
+        "type": "change",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "+",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 660,
+        "wires": [
+            [
+                "1b83461c8ae75d2f"
+            ]
+        ]
+    },
+    {
+        "id": "2f567e2ce3cf61a7",
+        "type": "change",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "-",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "4",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 700,
+        "wires": [
+            [
+                "1b83461c8ae75d2f"
+            ]
+        ]
+    },
+    {
+        "id": "bc48ca76163adfaa",
+        "type": "change",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "HUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "8",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 740,
+        "wires": [
+            [
+                "1b83461c8ae75d2f"
+            ]
+        ]
+    },
+    {
+        "id": "428ee8ab33e7e2ec",
+        "type": "change",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "RESET",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 800,
+        "wires": [
+            [
+                "1b83461c8ae75d2f"
+            ]
+        ]
+    },
+    {
+        "id": "4040e280a568d4fb",
+        "type": "http request",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "HTTP GET",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 1010,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b83461c8ae75d2f",
+        "type": "change",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "Build URL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "url",
+                "pt": "msg",
+                "to": "\"http://<MINISERVER IP>/dev/sps/io/<NAME VOM VIRTUELLEN EINGANG>/\" & msg.payload",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "4040e280a568d4fb"
+            ]
+        ]
+    },
+    {
+        "id": "eeb5588d38005907",
+        "type": "comment",
+        "z": "7d09e02b.55be3",
+        "g": "af4d52c60e3fa0f2",
+        "name": "LOXONE CONFIGURATION (HERE)",
+        "info": "MOIN! xD\nUm die Werte 1 bis 4 jetzt abzugreifen musst\ndu einen Binär-Decodierer benutzen. \n\naber alle achtung!\n(Gesendete Werte = Ausgang Codierer)\n1=Q1\n2=Q2\n4=Q3\n8=Q4",
+        "x": 990,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "07deedef341ba2a2",
+        "type": "zigbee2mqtt-server",
+        "name": "",
+        "host": "localhost",
+        "mqtt_port": "1883",
+        "mqtt_username": "",
+        "mqtt_password": "",
+        "mqtt_qos": "0",
+        "tls": "",
+        "usetls": false,
+        "base_topic": "zigbee2mqtt"
+    }
+]
